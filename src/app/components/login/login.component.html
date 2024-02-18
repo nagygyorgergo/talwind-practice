@@ -1,0 +1,54 @@
+<div class="bg-gray-100 h-screen flex flex-row">
+
+    <!-- Image Column -->
+    <div class="flex-grow hidden md:block md:flex-grow md:basis-7/10 relative" style="flex-basis: 70%;">
+        <img src="../../../assets/codingPlaceholder.jpg" alt="Background Login Image" class="object-cover h-full w-full">
+        <!-- Overlay Image, adjusted for demonstration -->
+        <img src="../../../assets/logoPlaceholder.png" alt="Overlay Image" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" style="width: 30%; height: auto;">
+    </div>
+
+    <!-- Form Column -->
+    <div class="flex-grow bg-white flex flex-col justify-center items-center bg-newcolor" style="flex-basis: 30%;">
+
+        <form class="w-4/5 mx-auto sm:w-full sm:max-w-md">
+
+            <div class="w-full max-w-md text-left mb-4"> <!-- Adjust this div to align the label to the left -->
+                <label class="text-white text-5xl font-semibold">
+                    Bejelentkezés
+                </label>
+                <p class="text-gray-400">
+                    placeholder placeholder placeholder placeholder 
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-white text-sm font-bold mb-2">
+                    Email cím
+                </label>
+                <input type="email" id="email" name="email" placeholder="Email" class="bg-metallicgray shadow appearance-none border:outline-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-white text-sm font-bold mb-2">
+                    Jelszó
+                </label>
+                <input type="password" id="password" name="password" placeholder="Jelszó" class="bg-metallicgray shadow appearance-none border:outline-none rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none" required>
+            </div>
+            <div class="flex items-center justify-between mb-6">
+                <label for="remember" class="inline-flex items-center">
+                    <input type="checkbox" id="remember" name="remember" class="form-checkbox text-indigo-600">
+                    <span class="ml-2 text-sm text-white">Bejelentkezve maradok</span>
+                </label>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="w-full max-w-md"> <!-- Container for the button with max-width -->
+                    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Bejelentkezés
+                    </button>
+                </div>
+                <a href="#" class="text-gray-400 text-center underline">Elfelejtette jelszavát?</a>
+            </div>
+            
+        </form>
+    </div>
+
+</div>
