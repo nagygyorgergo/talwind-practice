@@ -1,2 +1,60 @@
 
+
+<nav class="fixed top-0 left-0 w-full px-4 py-4 flex justify-between items-center z-50 ">
+
+		
+    <!-- Logo section -->
+    <div class="hidden 2xl:flex 2xl:items-center">
+        <a href="#">
+            <img src="../../../assets/logoPlaceholder.png" alt="Logo" class="h-8 w-8 mr-2">
+        </a>
+    </div>
+
+    <!-- Sidebar toggle -->
+    <div class="ml-auto 2xl:hidden ">
+        <button class="navbar-burger flex items-center text-white p-3" (click)="toggleSidebar()">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Mobile menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+        </button>
+    </div>
+    <!-- Sidebar -->
+    <div class="fixed inset-0 bg-transparent bg-opacity-50 z-40 2xl:hidden" *ngIf="isSidebarOpen" (click)="toggleSidebar()"></div>
+    <aside class="transform top-0 left-0 w-64 bg-primaryblue p-6 fixed h-full overflow-auto ease-in-out transition-all duration-300 z-50" [ngClass]="{'-translate-x-full': !isSidebarOpen, 'translate-x-0': isSidebarOpen}">
+        <div class="flex items-center mb-6">
+            <a href="#">
+                <img src="../../../assets/logoPlaceholder.png" alt="Logo" class="h-8 w-8 mr-2">
+            </a>
+        </div>
+        <ul class="space-y-2">
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">FŐOLDAL</a></li>
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">KÉPZÉSEINK</a></li>
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">MENTORPROGRAM</a></li>
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">TEMATIKA</a></li>
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">GYIK</a></li>
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">KAPCSOLAT</a></li>
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">BEJELENTKEZÉS</a></li>
+            <li><a href="#" class="font-semibold text-white px-4 py-2 hover:text-gray-600">REGISZTRÁCIÓ</a></li>
+        </ul>
+    </aside>
+
+    <!-- Middle nav links -->
+    <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 2xl:flex 2xl:mx-auto 2xl:flex 2xl:items-center 2xl:w-auto 2xl:space-x-6">
+        <li><a href="#" class="py-2 font-semibold text-white px-4 py-2 hover:text-gray-200">FŐOLDAL</a></li>
+        <li><a href="#" class=" font-semibold text-white px-4 py-2 hover:text-gray-200">KÉPZÉSEINK</a></li>
+        <li><a href="#" class=" font-semibold text-white px-4 py-2 hover:text-gray-200">MENTORPROGRAM</a></li>
+        <li><a href="#" class=" font-semibold text-white px-4 py-2 hover:text-gray-200">TEMATIKA</a></li>
+        <li><a href="#" class=" font-semibold text-white px-4 py-2 hover:text-gray-200">GYIK</a></li>
+        <li><a href="#" class=" font-semibold text-white px-4 py-2 hover:text-gray-200">KAPCSOLAT</a></li>
+    </ul>
+
+    <!-- Right nav links -->
+    <div class="hidden 2xl:inline-block 2xl:ml-auto 2xl:mr-3 py-2 px-6">
+        <a class="font-semibold text-white px-4 py-2 hover:text-gray-200" href="#">BEJELENTKEZÉS</a>
+        <a class="font-semibold text-white px-4 py-2 hover:text-gray-200" href="#">REGISZTRÁCIÓ</a>
+    </div >
+</nav>
+
+
 <router-outlet></router-outlet>
