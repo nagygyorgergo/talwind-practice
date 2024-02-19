@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  isSidebarOpen = false; // Sidebar state
-
-  toggleSidebar(): void {
-    this.isSidebarOpen = !this.isSidebarOpen;
-  }
-
+  items = new Array(10);
 }
