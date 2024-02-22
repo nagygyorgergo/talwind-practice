@@ -6,6 +6,9 @@ module.exports = {
     "./src/app/components/**/*.{html,ts}"
   ],
   theme: {
+    container: {
+      /* center: true */
+    },
     extend: {
       colors: {
         transparent: 'transparent',
